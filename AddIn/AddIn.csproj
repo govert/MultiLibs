@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	
+	<RunExcelDnaPack>false</RunExcelDnaPack>
+  </PropertyGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="ExcelDna.AddIn" Version="*-*" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Lib1\Lib1.csproj" />
+	  <ProjectReference Include="..\Lib2\Lib2.csproj" />
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="copy $(OutDir)\AddIn.deps.json $(OutDir)\MultiLib.deps.json" />
+		<Exec Command="copy $(OutDir)\AddIn.deps.json $(OutDir)\MultiLib64.deps.json" />
+	</Target>
+	
+</Project>

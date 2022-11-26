@@ -1,0 +1,9 @@
+﻿<DnaLibrary Name="MultiLib Add-in" >
+	<ExternalLibrary Path="AddIn.dll" />
+	<ExternalLibrary Path="Lib1.dll" />
+	<ExternalLibrary Path="Lib2.dll" />
+	<!--<ExternalLibrary Path="C:\Temp\MultiLibs\Lib1\bin\Debug\net6.0-windows\Lib1.dll" />
+	<ExternalLibrary Path="C:\Temp\MultiLibs\Lib2\bin\Debug\net6.0-windows\Lib2.dll" />-->
+	<!--<ExternalLibrary Path="..\..\..\..\Lib1\bin\Debug\net6.0-windows\Lib1.dll" />
+	<ExternalLibrary Path="..\..\..\..\Lib2\bin\Debug\net6.0-windows\Lib2.dll" />-->
+</DnaLibrary>
